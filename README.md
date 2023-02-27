@@ -1,30 +1,29 @@
 # SB2040
 
 Step 1:
-Remote into your pi and lets
-Prep:
-sudo apt update
-sudo apt upgrade
-sudo apt install python3 python3-pip python3-can
-sudo pip3 install pyserial
-sudo su pi
-cd ~
-git clone https://github.com/Arksine/CanBoot
+Remote into your pi and lets get it ready
 
+Prep:
+		sudo apt update
+		sudo apt upgrade
+		sudo apt install python3 python3-pip python3-can
+		sudo pip3 install pyserial
+		sudo su pi
+		cd ~
+		git clone https://github.com/Arksine/CanBoot
 
 
 Create can network:
-sudo nano /etc/network/interfaces.d/can0
-    file contents:
-        allow-hotplug can0
-        iface can0 can static
-            bitrate 1000000
-            up ifconfig $IFACE txqueuelen 1024
+	sudo nano /etc/network/interfaces.d/can0
+    	file contents:
+        	allow-hotplug can0
+        	iface can0 can static
+            	bitrate 1000000
+            	up ifconfig $IFACE txqueuelen 1024
 
-For later use: query network with: 'ip a'
+Now it's time to flash your octopus 1.1 board (assuming you have the 446 model). During this phase, don't hook up your SB2040.
 
-
-Octopus flash, leave toolhead board unhooked
+Octopus canboot flash:
     Canboot config:
         cd ~/CanBoot
         make menuconfig
@@ -36,6 +35,7 @@ Octopus flash, leave toolhead board unhooked
         32kib offset
         *support bootloader entry on rapid doubleclick
         escape, Y
+		(if it's not mentioned, leave default settings)
 
     Compile and move:
         make
