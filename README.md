@@ -4,17 +4,17 @@ THIS IS VERY MUCH A WORK IN PROGRESS FOR THE NEXT FEW DAYS, BEAR WITH ME. NEW TO
 
 Steps to switching to can bus with umbilical:
 
-Print your strain relief
+-Print your strain relief
 
-Rip out your old cable x/y chains, they're ugly anyway.
+-Rip out your old cable x/y chains, they're ugly anyway.
 
-Remove your xy endstop (you can relocate them or go sensorless)
+-Remove your xy endstop (you can relocate them or go sensorless)
 
-Terminate your probe, e-motor, thermistor, and heater cartridge (and x end stop if you're using one)
+-Terminate your probe, e-motor, thermistor, and heater cartridge (and x end stop if you're using one)
 
-Solder your fans and LED's to the face plate board.
+-Solder your fans and LED's to the face plate board.
 
-If you are using the Omron probe, plug it in before screwing the board to the tool head.
+-If you are using the Omron probe, plug it in before screwing the board to the tool head.
 
 
 ```
