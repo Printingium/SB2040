@@ -1,2 +1,2 @@
 # SB2040
-Setup guid
+Setup guide
