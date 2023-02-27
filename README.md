@@ -16,6 +16,8 @@
 
 - If you are using the Omron probe, plug it in before screwing the board to the tool head.
 
+## Now onto the fun stuff:
+
 
 ```
 Step 1:
