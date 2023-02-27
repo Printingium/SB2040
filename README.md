@@ -1,7 +1,25 @@
 # SB2040
 
+THIS IS VERY MUCH A WORK IN PROGRESS FOR THE NEXT FEW DAYS, BEAR WITH ME. NEW TO GITHUB.
+
+Steps to switching to can bus with umbilical:
+
+Print your strain relief
+
+Rip out your old cable x/y chains, they're ugly anyway.
+
+Remove your xy endstop (you can relocate them or go sensorless)
+
+Terminate your probe, e-motor, thermistor, and heater cartridge (and x end stop if you're using one)
+
+Solder your fans and LED's to the face plate board.
+
+If you are using the Omron probe, plug it in before screwing the board to the tool head.
+
+
+```
 Step 1:
-Remote into your pi and lets get it ready
+Remote (ssh) into your pi and lets get it ready
 
 Prep:
 		sudo apt update
@@ -151,6 +169,7 @@ Hook up data lines (plug into octopus board and plug into sb2040) then power to 
 
 HOORAY! NOW VERIFY INSTALLATION WITH THIS: python3 flash_can.py -i can0 -q
         You should see two UUID's Now you can copy them to your printer config as follows:
+```
 
  [mcu]
 canbus_uuid: ID from above 
