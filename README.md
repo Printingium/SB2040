@@ -242,8 +242,8 @@ probe_points:
 
 
 
+##Tip
 
-
-Timing too close error during ADXL calibration: change your x and y steppers from 32 microsteps to 16.
+If you get a timing too close error during ADXL calibration and your settings are 1,000,000 with a txquelen of 1024: change your x and y steppers from 32 microsteps to 16 for the ADXL test. You can switch back to 32 when it's done. Makes no difference since ADXL tuning is a physical measurement.
 
 
