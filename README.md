@@ -14,7 +14,7 @@
 
 - Solder your fans and LED's to the face plate board.
 
-- If you are using the Omron probe, plug it in before screwing the board to the tool head.
+- If you are using the Omron probe, plug it in before screwing the board to the tool head. It's an impossible fit otherwise.
 
 ## Now onto the fun stuff:
 
