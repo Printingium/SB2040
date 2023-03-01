@@ -173,7 +173,7 @@ HOORAY! NOW VERIFY INSTALLATION WITH THIS: python3 flash_can.py -i can0 -q
         You should see two UUID's Now you can copy them to your printer config as follows:
 ```
 
-###PRINTER.CFG CHANGES
+### PRINTER.CFG CHANGES
 
  [mcu]
 canbus_uuid: Octopus ID from above 
@@ -196,13 +196,13 @@ max_temp: 100
 
 
 
-##Pin changes:
+## Pin changes:
 
-#Extruder
+# Extruder
 Extruder temperature: sb2040:gpio27
 Extruder heater: sb2040:gpio6
 
-#Extruder Stepper motor
+# Extruder Stepper motor
 Stepping motor drive part
 E motor
 Function	pin number
@@ -211,21 +211,21 @@ STEP		gpio9
 DIR		gpio10
 UART		gpio8
 
-#Fans
+# Fans
 Fan0: sb2040:gpio13
     PWM: sb2040:gpio16
 Fan1: sb2040:gpio14
     PWM: sb2040:gpio17
 Fan2: sb2040:gpio15
 
-#SBLEDS
+# SBLEDS
 SBLEDS: sb2040:gpio12
 
-#Probe
+# Probe
 Endstop TAP: sb2040:gpio29
 Endstop Induction: sb2040:gpio28
 
-#Accelerometer
+# Accelerometer
 If you use a separate file, put this there
 [adxl345.cfg]
 [adxl345]
@@ -242,7 +242,7 @@ probe_points:
 
 
 
-##Tip
+## Tip
 
 If you get a timing too close error during ADXL calibration and your settings are 1,000,000 with a txquelen of 1024: change your x and y steppers from 32 microsteps to 16 for the ADXL test. You can switch back to 32 when it's done. Makes no difference since ADXL tuning is a physical measurement.
 
