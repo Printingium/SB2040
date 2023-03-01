@@ -173,17 +173,20 @@ HOORAY! NOW VERIFY INSTALLATION WITH THIS: python3 flash_can.py -i can0 -q
         You should see two UUID's Now you can copy them to your printer config as follows:
 ```
 
+###PRINTER.CFG CHANGES
+
  [mcu]
-canbus_uuid: ID from above 
+canbus_uuid: Octopus ID from above 
 
 [mcu sb2040]
-canbus_uuid: ID from above 
+canbus_uuid: SB2040 ID from above 
 
 ...
 
 [temperature_fan exhaust_fan]
 ...
 sensor_pin: sb2040:gpio26
+
 
 [temperature_sensor toolhead]
 sensor_type: temperature_mcu
@@ -193,30 +196,37 @@ max_temp: 100
 
 
 
-Pin changes:
+##Pin changes:
+
+#Extruder
 Extruder temperature: sb2040:gpio27
 Extruder heater: sb2040:gpio6
 
+#Extruder Stepper motor
+Stepping motor drive part
+E motor
+Function	pin number
+EN		gpio7
+STEP		gpio9
+DIR		gpio10
+UART		gpio8
+
+#Fans
 Fan0: sb2040:gpio13
     PWM: sb2040:gpio16
 Fan1: sb2040:gpio14
     PWM: sb2040:gpio17
 Fan2: sb2040:gpio15
 
+#SBLEDS
 SBLEDS: sb2040:gpio12
 
+#Probe
 Endstop TAP: sb2040:gpio29
 Endstop Induction: sb2040:gpio28
 
-Accelerometer
-Function	pin number
-MISO	gpio2
-MOSI	gpio3
-CLK	gpio0
-ADXL345-CS	gpio1
-ADXL345-INT1	gpio21
-ADXL345-INT2	gpio20
-
+#Accelerometer
+If you use a separate file, put this there
 [adxl345.cfg]
 [adxl345]
 cs_pin: sb2040:gpio1
@@ -230,13 +240,8 @@ accel_chip: adxl345
 probe_points:
     100, 100, 20
 
-Stepping motor drive part
-E motor
-drive	Function	pin number
-E.	EN	gpio7
-E.	STEP	gpio9
-E.	DIR	gpio10
-E.	UART	gpio8
+
+
 
 
 Timing too close error during ADXL calibration: change your x and y steppers from 32 microsteps to 16.
