@@ -176,9 +176,11 @@ HOORAY! NOW VERIFY INSTALLATION WITH THIS: python3 flash_can.py -i can0 -q
 ## PRINTER.CFG CHANGES
 
  [mcu]
+ 
 canbus_uuid: Octopus ID from above 
 
 [mcu sb2040]
+
 canbus_uuid: SB2040 ID from above 
 
 ...
