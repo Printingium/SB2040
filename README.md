@@ -173,7 +173,7 @@ HOORAY! NOW VERIFY INSTALLATION WITH THIS: python3 flash_can.py -i can0 -q
         You should see two UUID's Now you can copy them to your printer config as follows:
 ```
 
-### PRINTER.CFG CHANGES
+## PRINTER.CFG CHANGES
 
  [mcu]
 canbus_uuid: Octopus ID from above 
@@ -196,7 +196,7 @@ max_temp: 100
 
 
 
-## Pin changes:
+### Pin changes:
 
 # Extruder
 Extruder temperature: sb2040:gpio27
