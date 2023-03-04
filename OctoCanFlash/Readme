@@ -1,1 +1,24 @@
 Readme
+
+What does it do?
+Octocan flash retrieves/stores all of the information needed to flashe klipper to your can-bus boards, which of course it also does.
+
+Who is this program for? 
+Anyone who is running an octopus board in can bridge-mode with a Mellow SB2040 can bus board (though it can probably be used with other toolhead boards, provided they are being used on an octopus in can-bridge mode but try it out at your own risk.)
+
+To use this program: 
+  1) Download OCF.sh onto your pi.
+  2) Make the file executable (chmod +x OCF.sh)
+  3) Run file (./OCF.sh)
+
+On the first run octocanflash, it will run through an install procedure and gather required information Like your UUID's.
+This information is stored in the CanConfigsFolder.
+
+Once set up the program will only require a couple pieces of input:
+  1) acceptance of risk
+  2) 'Enter' to flash the octopus board
+  3) 'Enter' to flash the SB2040
+
+There is a troubleshooting guide you can access at the end of the script if something went wrong and your stuff is no longer working. If you come across an error I have not addressed please submit it here and I will add it to the guide. Right now there are only two error's 
+
+I hope some of you find this helpful, even though it is obviously overkill.
