@@ -266,13 +266,13 @@ function handle_configs() {
 function troubleshooting_tips {
     type_text "Press the 'T' key to display our troublehsooting guide, otherwise continuing in $1"
     remaining=$1
-    while [ $remaining -gt -1 ]; do
+    while [ $remaining -gt 0 ]; do
         read -t 1 -n 1 -s key
         if [[ $key = t ]]; then
             type_text "Displaying troubleshooting tips..."
             while true; do
                 PS3="Which error do you need tips for? "
-                select choice in "Error 19" "SB MCU" "Other"; do
+                select choice in "[Error 19]" "SB2040 MCU Cannot Connect" "MCU Cannot Connect" "Other"; do
                     case $REPLY in
                         1 ) type_text "[Errno 19] No such device:"
                             type_text "You have likely flashed the wrong klipper data to your octopus board."
@@ -299,7 +299,18 @@ function troubleshooting_tips {
                             type_text "RP2040 \n CLKDIV 2 \n Do not build \n CAN bus \n (4) \n (5) \n (1000000) \n (gpio24) \n *support bootloader entry"
                             type_text "now run: \n make -j 4"
                             type_text "Once complete, run this command: \n 'sudo make flash FLASH_DEVICE=2e8a:0003" ; break;;
-                        3 ) echo "We don't have any other tips for now. Please submit your error and we will add it."; break;;
+                        3 ) type_text "Klipper unable to connect to MCU"
+                            type_text "This error is caused by either the wrong confguration being flashed to your octopus board," 
+                            type_text "or a communication error during flashing."
+                            type_text "Usually you can just rerun OctoCanFlash and it will work"
+                            type_text "To verify this is the case, type 'lsusb' in your shell window."
+                            type_text "If it shows stm446xxx.... or the like (maybe you have the 429 version, for example)"
+                            type_text "then you are good to rerun OctoCanFlash."
+                            type_text "If not, try rebooting your printer a couple of times. If the error is still there,"
+                            type_text "double tap your reset button (below the knob on your 12864 display) and check ls /dev/serial/by-id" 
+                            type_text "If it shows up, run OctoCanFlash again. If not you may need to re-flash CanBoot."; break;;
+                        4 ) type_text "We don't have any other tips for now. Please submit your error and we will add it."; break;;
+                        
                         * ) echo "Please enter a valid option.";;
                     esac
                 done
