@@ -272,7 +272,7 @@ function troubleshooting_tips {
             type_text "Displaying troubleshooting tips..."
             while true; do
                 PS3="Which error do you need tips for? "
-                select choice in "[Error 19]" "SB2040 MCU Cannot Connect" "MCU Cannot Connect" "Other"; do
+                select choice in "[Error 19] No Such Device" "SB2040 MCU Cannot Connect" "MCU Cannot Connect" "Other"; do
                     case $REPLY in
                         1 ) type_text "[Errno 19] No such device:"
                             type_text "You have likely flashed the wrong klipper data to your octopus board."
