@@ -15,6 +15,7 @@
 - Solder your fans and LED's to the face plate board.
 
 - If you are using the Omron probe, plug it in before screwing the board to the tool head. It's an impossible fit otherwise.
+	(Note: you may want to use the LDO kit toolhead board prints as they set the board back a bit which can make this a little easier)
 
 ## Now onto the fun stuff:
 
