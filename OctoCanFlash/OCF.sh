@@ -431,16 +431,17 @@ sudo service klipper stop
 handle_configs "octopus"
 make clean KCONFIG_CONFIG=config.octopus
 make KCONFIG_CONFIG=config.octopus
+octoretry=0
 
 #Ensure compile completed before continuing
 if [ ! -e ~/klipper/out/klipper.bin ]
 then
-    if [ $sbretry -lt 3 ]
+    if [ $octoretry -lt 3 ]
     then
         type_text "compile failed, this usually means there's a problem with your config file, let's make it again."
         rm ~/klipper/config.octopus
         rm ~/OctoCanFlash/CanConfigs/config.octopus.klipper
-        ((sbretry++))
+        ((octoretry++))
         handle_configs "octopus"
     else
         type_text "too many retries, something is wrong"
