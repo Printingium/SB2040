@@ -1,7 +1,5 @@
 # SB2040
 
-### THIS IS VERY MUCH A WORK IN PROGRESS FOR THE NEXT FEW weeks, BEAR WITH ME. NEW TO GITHUB.
-
 ## Steps to switching to can bus with umbilical:
 
 - Print your strain relief
