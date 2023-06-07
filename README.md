@@ -215,8 +215,10 @@ UART		gpio8
 ### Fans
 Fan0: sb2040:gpio13
     PWM: sb2040:gpio16
+
 Fan1: sb2040:gpio14
     PWM: sb2040:gpio17
+
 Fan2: sb2040:gpio15
 
 ### SBLEDS
@@ -224,6 +226,7 @@ SBLEDS: sb2040:gpio12
 
 ### Probe
 Endstop TAP: sb2040:gpio29
+
 Endstop Induction: sb2040:gpio28
 
 ### Accelerometer
